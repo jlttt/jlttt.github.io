@@ -1,0 +1,24 @@
+---
+---
+
+@import "type-theme";
+
+.site-header .avatar {
+	width: auto;
+	border-raduis: unset;
+}
+
+
+.call-out {
+	background-color: #555;
+}
+
+.post-teaser h2.subtitle {
+	margin:0;
+	font-weight:200;
+	font-size: 1.5em;
+	
+	a {
+		color: #555;
+	}
+}
