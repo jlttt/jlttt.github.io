@@ -283,7 +283,7 @@ $upperLeft = [
 ```
 Les tests passent toujours...
 
-# Refacto #7 : Des lettres aux lignes
+# Refacto #8 : Des lettres aux lignes
 
 Les similitudes entre les lignes du quart supérieur gauche du diamant peuvent être utilisées pour le générer à partir d'une séquence de l'alphabet et d'une boucle pour ajouter les espaces en préfixe et suffixe . Pour le cas du diamant 'C' :
 ```php
@@ -329,7 +329,7 @@ public function create($lastLetter) {
 }
 ```
 
-# Refacto 8 : Appels en cascade.
+# Refacto #9 : Appels en cascade.
 
 Pour construire le diamant, il faut d'abord construire le haut du diamant.  
 Pour construire le haut du diamant, il faut d'abord construire le quart haut gauche du diamant.  
