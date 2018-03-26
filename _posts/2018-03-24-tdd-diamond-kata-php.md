@@ -352,7 +352,7 @@ class Diamond {
             function ($left) {
                 return $left . substr(strrev($left), 1);
             },
-            $this->createUpperLeft($lastLetter);
+            $this->createUpperLeft($lastLetter)
         );
     }
 
