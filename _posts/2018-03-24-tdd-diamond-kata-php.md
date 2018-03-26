@@ -361,7 +361,7 @@ class Diamond {
         $size = count($alphabet);
         return array_map(
             function ($letter, $i) use ($size) {
-                return str_repeat(' ', $size - ($i +1)) . 
+                return str_repeat(' ', $size - ($i + 1)) .
                     $letter .
                     str_repeat(' ', $i);
             },
