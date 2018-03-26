@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Les diamants sont éternels
-subtitle: Encore une autre tentative sur le kata Diamond
+subtitle: Une tentative sur le kata Diamond
 tags: [php, TDD, kata]
 ---
 
