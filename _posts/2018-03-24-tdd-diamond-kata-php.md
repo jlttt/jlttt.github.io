@@ -163,7 +163,7 @@ public function create($letter) {
 ```
 Les tests passent toujours...
 
-# Test #3 : Cullinan
+# Test #3 : 'C'-ullinan
 
 J'ai besoin d'un peu plus d'exemple pour aller plus loin. Je rajoute donc un test sur un plus gros diamant, le diamant 'C' :
 ```php
@@ -269,8 +269,6 @@ public function create($letter) {
     );
     return implode("\n", $diamond);
 }
-
-
 ```
 
 # Refacto #7 : La diagonale des lettres
@@ -291,13 +289,14 @@ Les similitudes entre les lignes du quart supérieur gauche du diamant peuvent �
 ```php
 $alphabet = range('A', 'C');
 $size = count($alphabet);
-$upperLeft = return array_map(
+$upperLeft = array_map(
     function ($letter, $i) use ($size) {
         return str_repeat(' ', $size - ($i +1)) . 
             $letter .
             str_repeat(' ', $i);
     },
-    $alphabet
+    $alphabet,
+    array_keys($alphabet);
 );
 ```
 Finalement, le nom `$letter`, que j'ai initialement choisi pour l'argument de la fonction `create`, m'embête maintenant. Je veux l'utiliser ici, et n'ai pas vraiment d'autre idée de nom pour ce contexte.  
@@ -307,13 +306,14 @@ Cela nous donne le code générique suivant :
 public function create($lastLetter) {
     $alphabet = range('A', $lastLetter);
     $size = count($alphabet);
-    $upperLeft = return array_map(
+    $upperLeft = array_map(
         function ($letter, $i) use ($size) {
             return str_repeat(' ', $size - ($i +1)) . 
                 $letter .
                 str_repeat(' ', $i);
         },
-        $alphabet
+        $alphabet,
+        array_keys($alpahbet)
     );
     $upper = array_map(
         function ($left) {
@@ -365,7 +365,8 @@ class Diamond {
                     $letter .
                     str_repeat(' ', $i);
             },
-            $alphabet
+            $alphabet,
+            array_keys($alphabet)
         );
     }
 }
