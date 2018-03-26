@@ -313,7 +313,7 @@ public function create($lastLetter) {
                 str_repeat(' ', $i);
         },
         $alphabet,
-        array_keys($alpahbet)
+        array_keys($alphabet)
     );
     $upper = array_map(
         function ($left) {
